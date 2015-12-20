@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Java Script: языки и базы данных. {{title}}</title>
+		
+		<style>
+			body {
+				font-family: calibri, sans-serif;
+			}
+			
+			div {
+				position: absolute;
+				width: 450px;
+				height: 300px;
+				left: 50%;
+				top: 50%;
+				margin-left: -225px;
+				margin-top: -150px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div>
+		
+		    <ul id="nav">
+                <? for (var element in menu) { 
+                    print("<li><a href='/" +  element + "/'>" + menu[element] + "</a></li>");
+		        } ?>
+		    </ul>
+		
+
+		   <h1>Java Script: языки и базы данных. {{title}}</h1>
+			
+			
+			
+			
+			{{message}}
+			
+			<br><br><small>Сайт работает на: <a href="http://github.com/xeryan/xepler">Xepler - node.js web framework</a></small>
+		</div>
+	</body>
+</html>

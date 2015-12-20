@@ -1,0 +1,12 @@
+{
+  "name": "app-on-xeplerjs",
+  "version": "1.0.0",
+  "description": "My simply application using **node.js**, framework **xepler.js** and flat JSON file database **lowdb**",
+  "main": "index.js",
+  "dependencies": {
+    "lowdb": "^0.7.1",
+    "xepler": "^1.4.0"
+  },
+  "author": "nibeon",
+  "license": "ISC"
+}

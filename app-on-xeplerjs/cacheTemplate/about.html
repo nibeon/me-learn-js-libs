@@ -1,0 +1,28 @@
+[function anonymous(obj,$
+/**/) {
+var __fname__='views',__t,__p='',__escapeMap__={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;'},__escapeMapKeys__='';for(var key in __escapeMap__){__escapeMapKeys__+=key;}var __escapeRegex__=new RegExp('['+__escapeMapKeys__+']','g'),print=function (str) {
+         __p += str;
+      },include=function (view, locals) {
+         if (!locals) locals = {};
+         locals.filename = $.path.join(__fname__, view + '.html');
+         
+         if (!$.cache[view]) $.cache[view] = $.compile($.fs.readFileSync(locals.filename).toString(), {filename: locals.filename});
+         __p += $.cache[view](locals,this);
+      },escape=function (str) {
+         return str.replace(__escapeRegex__, function(match) {
+            return __escapeMap__[match];
+         });
+      },isset=function (variable) {
+         return typeof variable != "undefined";
+      };with(obj||{}){__p+='<!doctype html>\r\n<html>\r\n\t<head>\r\n\t\t<title>Java Script: языки и базы данных. '+
+((__t=(title))==null?'':__t)+
+'</title>\r\n\t\t\r\n\t\t<style>\r\n\t\t\tbody {\r\n\t\t\t\tfont-family: calibri, sans-serif;\r\n\t\t\t}\r\n\t\t\t\r\n\t\t\tdiv {\r\n\t\t\t\tposition: absolute;\r\n\t\t\t\twidth: 450px;\r\n\t\t\t\theight: 300px;\r\n\t\t\t\tleft: 50%;\r\n\t\t\t\ttop: 50%;\r\n\t\t\t\tmargin-left: -225px;\r\n\t\t\t\tmargin-top: -150px;\r\n\t\t\t}\r\n\t\t</style>\r\n\t</head>\r\n\t\r\n\t<body>\r\n\t\t<div>\r\n\t\t\r\n\t\t    <ul id="nav">\r\n                ';
+for (var element in menu) { 
+                    print("<li><a href='/" +  element + "/'>" + menu[element] + "</a></li>");
+		        }
+__p+='\r\n\t\t    </ul>\r\n\t\t\r\n\r\n\t\t   <h1>Java Script: языки и базы данных. '+
+((__t=(title))==null?'':__t)+
+'</h1>\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t\r\n\t\t\t'+
+((__t=(message))==null?'':__t)+
+'\r\n\t\t\t\r\n\t\t\t<br><br><small>Сайт работает на: <a href="http://github.com/xeryan/xepler">Xepler - node.js web framework</a></small>\r\n\t\t</div>\r\n\t</body>\r\n</html>';} return __p;
+}]

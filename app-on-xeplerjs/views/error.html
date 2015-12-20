@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>{{title}}</title>
+		
+		<style>
+			body {
+				font-family: calibri, sans-serif;
+			}
+			
+			div {
+				position: absolute;
+				width: 450px;
+				height: 300px;
+				left: 50%;
+				top: 50%;
+				margin-left: -225px;
+				margin-top: -150px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div>
+			<h1>{{title}} <small>({{errorno}} error)</small></h1>
+			
+			{{message}}
+			
+			<br><br><small><a href="http://github.com/xeryan/xepler">Xepler - node.js web framework</a></small>
+		</div>
+	</body>
+</html>

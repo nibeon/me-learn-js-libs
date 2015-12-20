@@ -1,0 +1,18 @@
+[function anonymous(obj,$
+/**/) {
+var __fname__='views',__t,__p='',__escapeMap__={'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;'},__escapeMapKeys__='';for(var key in __escapeMap__){__escapeMapKeys__+=key;}var __escapeRegex__=new RegExp('['+__escapeMapKeys__+']','g'),print=function (str) {
+         __p += str;
+      },include=function (view, locals) {
+         if (!locals) locals = {};
+         locals.filename = $.path.join(__fname__, view + '.html');
+         
+         if (!$.cache[view]) $.cache[view] = $.compile($.fs.readFileSync(locals.filename).toString(), {filename: locals.filename});
+         __p += $.cache[view](locals,this);
+      },escape=function (str) {
+         return str.replace(__escapeRegex__, function(match) {
+            return __escapeMap__[match];
+         });
+      },isset=function (variable) {
+         return typeof variable != "undefined";
+      };with(obj||{}){__p+='<!DOCTYPE html>\r\n<html>\r\n\t<head>\r\n\t\t<meta charset="UTF-8">\r\n\t\t<title>Users list</title>\r\n\t</head>\r\n\t<body>\r\n\t\t<h1>\r\n\t\t\tЗдесь будет список юзеров.\r\n\t\t</h1>\r\n\t</body>\r\n</html>';} return __p;
+}]

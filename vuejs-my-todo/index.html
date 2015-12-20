@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vuejs learning</title>
+	
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="bower_components/pure/pure.css">
+  <link rel="stylesheet" href="bower_components/icono/dist/icono.min.css">
+	
+</head>
+<body>
+
+	
+<div id="todos" data-title="{{title}}">
+  <h1>{{title}}</h1>
+  <br>
+  
+  <ul>
+    <li v-for="task in tasks">
+        <i v-if="task.done == true"
+          v-on:click="task.done = !task.done"
+          class="icono-check"></i>
+        <i v-if="task.done == false"
+          v-on:click="task.done = !task.done"
+          class="icono-cross"></i>
+        <span 
+            v-on:click="editTask = task"
+            v-show="task != editTask">
+            {{ task.content }}
+        </span>
+        <input
+            v-model="editTask.content" 
+            v-on:keyup.enter="editTask = null"
+            v-show="task == editTask" type="text">
+        <a class="del" alt="Удалить" data-title="Удалить">
+            <i class="icono-trash" v-on:click="removeTask($index)"></i> 
+        </a>
+    </li>
+  </ul>
+  <br>
+  
+  <form class="pure-form add-tasks" v-on:submit="addTask">
+    <input 
+          type="text" 
+          v-model="newTask" 
+          placeholder="Добавить задачу">
+  </form>
+ 
+</div>
+
+
+<script type="text/javascript" src="bower_components/vue/dist/vue.min.js"></script>
+<script src="js/todos.js"></script>
+	
+</body>
+</html>

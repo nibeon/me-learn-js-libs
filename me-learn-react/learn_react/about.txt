@@ -1,3 +1,0 @@
-по обучалке.
-
-остановился здесь - https://maxfarseer.gitbooks.io/react-course-ru/content/zhiznennii_tsikl_komponenta.html

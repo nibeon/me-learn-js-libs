@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+
+import RegistrationForm from './RegistrationForm';
+
 // import Dropdown from './Dropdown';
+/*
 import Header from './Header';
 
 const menu = [
@@ -16,12 +20,13 @@ const menu = [
     label: 'Posts'
   }
 ];
+*/
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Header items={menu}/>
+        <RegistrationForm />
       </div>
     );
   }

@@ -1,7 +1,4 @@
-const initialState = [
-    'Smells teen like spirit',
-    'Enter Sandman'
-]
+const initialState = [];
 
 export default function playlist(state = initialState, action) {
     console.log(action);

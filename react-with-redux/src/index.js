@@ -1,12 +1,43 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
 
+const initialState = [
+    'Smells teen like spirit',
+    'Enter Sandman'
+];
+
+function playlist(state = initialState, action) {
+    console.log(action);
+    if(action.type === 'ADD_TRACK') {
+        return [
+            ...state,
+            action.payload
+        ];
+    }
+    return state;
+}
+
+const store = createStore(playlist);
+
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>,
+    document.getElementById('root')
+);
+registerServiceWorker();
+
+
+
+
+/*
 import { createStore } from 'redux';
 
 function playlist(state = [], action) {
@@ -41,3 +72,4 @@ addTrackBtn.addEventListener('click', () => {
     //console.log('trackName', trackName);
     store.dispatch({ type: 'ADD_TRACK', payload: trackName });
 })
+*/
